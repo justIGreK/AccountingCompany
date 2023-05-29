@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="509.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Controllers.Activity.addActivityController">
+    <children>
+        <AnchorPane prefHeight="60.0" prefWidth="510.0" style="-fx-background-color: #2F3F73;">
+            <children>
+                <Label layoutX="120.0" layoutY="17.0" text="Добавление мероприятия" textFill="WHITE">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="21.0" layoutY="84.0" text="Введите название мероприятия" />
+        <TextField fx:id="event_name_field" layoutX="22.0" layoutY="107.0" promptText="название" />
+        <Label layoutX="21.0" layoutY="144.0" text="Подробная информация о мероприятии" />
+        <TextField fx:id="event_description" layoutX="22.0" layoutY="167.0" prefHeight="92.0" prefWidth="371.0" promptText="подробности" />
+        <Button fx:id="add_activity_btn" layoutX="22.0" layoutY="476.0" mnemonicParsing="false" text="добавить метроприятие" />
+    </children>
+</AnchorPane>

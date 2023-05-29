@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="247.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Controllers.Efficiency.WorkWithEmpEffController">
+   <children>
+      <TextField fx:id="id" layoutX="25.0" layoutY="14.0" prefHeight="24.0" prefWidth="65.0" promptText="id" />
+      <Button fx:id="select_btn" layoutX="96.0" layoutY="14.0" mnemonicParsing="false" text="Выбрать" />
+      <Label fx:id="emp_info" layoutX="25.0" layoutY="51.0" prefHeight="16.0" prefWidth="568.0" text="Тут будет отображаться информация о выбранном вами сотруднике" />
+      <Spinner fx:id="select_hour" layoutX="30.0" layoutY="134.0" prefHeight="24.0" prefWidth="121.0" />
+      <Button fx:id="add_hour" layoutX="151.0" layoutY="134.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="133.0" text="добавить часы" />
+      <Button fx:id="add_permited" layoutX="30.0" layoutY="174.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="121.0" text="дать выговор" />
+      <Button fx:id="delete_permited" layoutX="173.0" layoutY="174.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="121.0" text="снять выговор" />
+   </children>
+</AnchorPane>

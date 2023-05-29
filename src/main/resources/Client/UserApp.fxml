@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Controllers.UserAppController">
+    <children>
+        <AnchorPane prefHeight="51.0" prefWidth="700.0" style="-fx-background-color: #2F3F73;">
+            <children>
+                <Label layoutX="14.0" layoutY="8.0" prefHeight="35.0" prefWidth="348.0" text="Учет деятельности компании" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Label fx:id="name_label" layoutX="566.0" layoutY="6.0" prefHeight="16.0" prefWidth="114.0" text="Имя " textFill="WHITE" />
+                <Label fx:id="login_label" layoutX="566.0" layoutY="29.0" prefHeight="16.0" prefWidth="114.0" text="Логин" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+        <TabPane layoutY="51.0" prefHeight="540.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Работа с сотрудниками">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TabPane prefHeight="520.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+                                    <tabs>
+                                        <Tab text="просмотр сотрудников">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TableView fx:id="employeeTable" layoutX="14.0" layoutY="14.0" prefHeight="425.0" prefWidth="674.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="employee_id" prefWidth="42.0" text="id" />
+                                                                <TableColumn fx:id="employee_name" prefWidth="108.0" text="имя" />
+                                                                <TableColumn fx:id="employee_surname" prefWidth="108.0" text="фамилия" />
+                                                                <TableColumn fx:id="employee_location" prefWidth="103.0" text="локация" />
+                                                                <TableColumn fx:id="employee_department" prefWidth="96.0" text="отдел" />
+                                                                <TableColumn fx:id="employee_position" prefWidth="152.0" text="должность" />
+                                                                <TableColumn fx:id="employee_salary" prefWidth="64.0" text="руб/час" />
+                                                            </columns>
+                                                        </TableView>
+                                                        <Button fx:id="reload_btn" layoutX="14.0" layoutY="451.0" mnemonicParsing="false" text="обновить" />
+                                                    </children></AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="статистика">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Button fx:id="department_statistic_btn" layoutX="14.0" layoutY="24.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="373.0" text="Колличество работников по отделам" />
+                                                        <Button fx:id="city_statistic_btn" layoutX="15.0" layoutY="57.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="373.0" text="статистика по городам" />
+                                                    </children></AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="учет работы">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TableView fx:id="table_efficiency" layoutX="14.0" layoutY="14.0" prefHeight="421.0" prefWidth="672.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="eff_emp_id_column" prefWidth="47.0" text="id" />
+                                                                <TableColumn fx:id="eff_emp_name_column" prefWidth="123.0" text="имя" />
+                                                                <TableColumn fx:id="eff_emp_surname_column" prefWidth="124.0" text="фамилия" />
+                                                                <TableColumn fx:id="eff_emp_position_column" prefWidth="164.0" text="должность" />
+                                                                <TableColumn fx:id="eff_emp_hour_column" prefWidth="59.0" text="часы" />
+                                                                <TableColumn fx:id="eff_emp_reprimant_column" prefWidth="77.0" text="выговор" />
+                                                                <TableColumn fx:id="eff_emp_sum_column" prefWidth="77.0" text="итог руб" />
+                                                            </columns>
+                                                        </TableView>
+                                                        <Button fx:id="reload_efficiency" layoutX="14.0" layoutY="445.0" mnemonicParsing="false" text="обновить" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+
+                                        </Tab>
+                                        <Tab text="мероприятия">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TableView fx:id="table_activity" layoutX="14.0" layoutY="14.0" prefHeight="421.0" prefWidth="672.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="activity__id" prefWidth="113.0" text="id" />
+                                                                <TableColumn fx:id="activity_name" prefWidth="217.0" text="название мероприятия" />
+                                                                <TableColumn fx:id="activity_description" prefWidth="341.0" text="подробности" />
+                                                            </columns>
+                                                        </TableView>
+                                                        <Button fx:id="reload_activity" layoutX="14.0" layoutY="445.0" mnemonicParsing="false" text="обновить" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                    </tabs>
+                                </TabPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
